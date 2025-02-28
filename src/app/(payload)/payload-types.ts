@@ -162,21 +162,6 @@ export interface Page {
    * Only one page can be set as the home page
    */
   isHomePage?: boolean | null;
-  content: {
-    root: {
-      type: string;
-      children: {
-        type: string;
-        version: number;
-        [k: string]: unknown;
-      }[];
-      direction: ('ltr' | 'rtl') | null;
-      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
-      indent: number;
-      version: number;
-    };
-    [k: string]: unknown;
-  };
   hero: {
     heading: string;
     subheading?: string | null;
@@ -316,7 +301,6 @@ export interface PagesSelect<T extends boolean = true> {
   title?: T;
   slug?: T;
   isHomePage?: T;
-  content?: T;
   hero?:
     | T
     | {

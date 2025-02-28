@@ -1,8 +1,11 @@
 @import "tailwindcss";
 
 @theme {
-    --font-sans: var(--font-geist-sans);
-    --font-mono: var(--font-geist-mono);
+    --font-heading: var(--font-julius-sans-one);
+    --font-main: var(--font-open-sans);
+    --font-signature: var(--font-babylonica);
+    --color-primary: #e3651d;
+    --color-secondary: #010e1e;
 }
 
 :root {
@@ -19,6 +22,42 @@
 
 body {
     color: var(--foreground);
-    background: var(--background);
-    font-family: Arial, Helvetica, sans-serif;
+    background: var(--color-secondary);
+    font-family: var(--font-main);
+}
+
+nav {
+    font-family: var(--font-heading);
+}
+
+.hero {
+    position: relative;
+    z-index: 1;
+    margin-top: 0;
+    padding-top: 0;
+
+    font-family: var(--font-heading);
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("/hero.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.6;
+    z-index: -1;
+}
+
+.body-text {
+    font-family: var(--font-main);
+}
+
+.signature {
+    font-family: var(--font-babylonica);
 }

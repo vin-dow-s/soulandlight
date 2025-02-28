@@ -33,11 +33,6 @@ export const Pages: CollectionConfig = {
             },
         },
         {
-            name: "content",
-            type: "richText",
-            required: true,
-        },
-        {
             name: "hero",
             type: "group",
             fields: [
