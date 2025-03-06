@@ -14,7 +14,7 @@ const Navigation = () => {
     return (
         <nav className="fixed top-0 left-0 right-0 z-50 bg-transparent backdrop-blur-sm p-4 px-8 h-20">
             <div className="flex justify-between items-center ">
-                <Link href="/" className=" text-white font-light">
+                <Link href="/" className=" text-white font-light ">
                     <div className="flex items-center gap-4">
                         <Image
                             src="/metatron.png"
@@ -34,21 +34,22 @@ const Navigation = () => {
                     </div>
                 </Link>
 
-                <div className="hidden md:flex mx-auto">
-                    <div className="flex items-baseline justify-center gap-8">
+                <div className="hidden md:flex ml-auto">
+                    <div className="flex items-baseline gap-8">
                         <Link
-                            href="/"
-                            className="text-white hover:text-primary font-medium"
+                            href="/#services"
+                            className="text-white hover:text-primary font-medium transition-colors"
                         >
                             Services
                         </Link>
                         <Link
-                            href="/about"
-                            className="text-white hover:text-primary font-medium"
+                            href="/#a-propos"
+                            className="text-white hover:text-primary font-medium transition-colors"
                         >
                             A propos
                         </Link>
-                        <Link
+
+                        {/* <Link
                             href="/tirages-2025"
                             className="text-white hover:text-primary font-medium"
                         >
@@ -59,18 +60,15 @@ const Navigation = () => {
                             className="text-white hover:text-primary font-medium"
                         >
                             Galerie
+                        </Link> */}
+                        <Link
+                            href="/"
+                            className="text-white hover:text-primary font-medium transition-colors"
+                        >
+                            Contactez-moi
                         </Link>
                     </div>
                 </div>
-                <div>
-                    <Link
-                        href="/"
-                        className="text-white hover:text-primary font-medium"
-                    >
-                        Contactez-moi
-                    </Link>
-                </div>
-
                 <div className="md:hidden ml-auto">
                     <button
                         onClick={toggleMenu}

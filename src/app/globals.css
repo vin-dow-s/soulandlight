@@ -4,18 +4,20 @@
     --font-heading: var(--font-julius-sans-one);
     --font-main: var(--font-open-sans);
     --font-signature: var(--font-babylonica);
-    --color-primary: #e3651d;
+    --color-primary: #ff7321;
     --color-secondary: #010e1e;
+    --color-seance-energetique: #82bf62;
+    --color-harmonisation: #9747ec;
 }
 
 :root {
-    --background: #ffffff;
-    --foreground: #171717;
+    --background: #010e1e;
+    --foreground: #ededed;
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --background: #0a0a0a;
+        --background: #010e1e;
         --foreground: #ededed;
     }
 }
@@ -48,9 +50,10 @@ nav {
     height: 100%;
     background-image: url("/hero.jpg");
     background-size: cover;
-    background-position: center;
+    background-position: bottom;
     background-repeat: no-repeat;
-    opacity: 0.6;
+    background-color: rgba(1, 14, 30, 0.8);
+    background-blend-mode: overlay;
     z-index: -1;
 }
 
