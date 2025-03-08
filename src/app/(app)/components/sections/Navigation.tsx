@@ -25,7 +25,7 @@ const Navigation = () => {
                 >
                     <div className="flex items-center gap-2 sm:gap-4">
                         <Image
-                            src="/metatron.png"
+                            src="/assets/metatron.png"
                             alt="Logo"
                             width={48}
                             height={48}

@@ -75,7 +75,7 @@ const Hero = () => {
             {/* Right Side: Image (Shrinks Responsively) */}
             <div className="flex justify-center lg:justify-end">
                 <Image
-                    src="/pascal.png"
+                    src="/assets/pascal.png"
                     alt="Pascal photo"
                     width={550}
                     height={550}

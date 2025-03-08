@@ -16,7 +16,7 @@ const About = () => {
             <div className="flex flex-col md:flex-row gap-12 ">
                 <div>
                     <Image
-                        src="/pascal2.jpg"
+                        src="/assets/pascal2.jpg"
                         alt="Photo Pascal"
                         className="rounded-lg"
                         width={1000}
