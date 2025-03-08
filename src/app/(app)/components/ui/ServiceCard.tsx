@@ -6,13 +6,11 @@ type ServiceCardProps = {
     title: string
     variant: "cta" | "secondary" | "energetique" | "guidance" | "harmonisation"
     subtitle?: string
-    price: string
 }
 
 const variantToList = {
     energetique: {
         points: [
-            "Connexion aux énergies Christique & Mariale",
             "Libération de vos blocages énergétiques et harmonisation de vos chakras",
             "Libération karmique et transgénérationnelle",
             "Rééquilibrage et augmentation de votre taux vibratoire",
@@ -23,7 +21,6 @@ const variantToList = {
     },
     guidance: {
         points: [
-            "Connexion à mes guides et à l'univers",
             "Tirages et interprétations des cartes du tarot",
             "Réponses à vos questions urgentes pour éclairer votre chemin",
             "Conseils personnalisés pour vous apporter la lumière sur chaque aspect de votre vie",
@@ -33,7 +30,7 @@ const variantToList = {
     },
     harmonisation: {
         points: [
-            "Purification et harmonisation (lieux professionnels ou personnels)",
+            "Purification et harmonisation (lieux personnels ou profesionnels)",
             "Libération des blocages énergétiques",
             "Boost énergétique (pour lancement de votre activité ou pour attirer la prospérité)",
             "Grande protection spirituelle (purification et mise sous protection du lieu)",
@@ -41,8 +38,10 @@ const variantToList = {
     },
 }
 
-const ServiceCard = ({ title, variant, subtitle, price }: ServiceCardProps) => {
+const ServiceCard = ({ title, variant, subtitle }: ServiceCardProps) => {
     let color = ""
+    let price = ""
+
     switch (variant) {
         case "energetique":
             color = "--color-seance-energetique"
@@ -82,14 +81,21 @@ const ServiceCard = ({ title, variant, subtitle, price }: ServiceCardProps) => {
                 </div>
                 <div className="h-24">
                     <h4 className="text-4xl font-heading">
-                        {price.split("€").map((part, index, arr) => (
-                            <span key={index}>
-                                {part}
-                                {index < arr.length - 1 && (
+                        {variant == "energetique" ||
+                        variant == "harmonisation" ? (
+                            <div className="flex items-center justify-center">
+                                <div className="text-lg self-baseline">*</div>
+                                <div>
+                                    De 70
+                                    <span className="text-sm">€</span> à 150
                                     <span className="text-sm">€</span>
-                                )}
-                            </span>
-                        ))}
+                                </div>
+                            </div>
+                        ) : (
+                            <div>
+                                70<span className="text-sm">€</span>
+                            </div>
+                        )}
                     </h4>
                 </div>
             </div>
@@ -99,8 +105,8 @@ const ServiceCard = ({ title, variant, subtitle, price }: ServiceCardProps) => {
                 ].points.map((point) => (
                     <li key={point} className="text-sm flex items-start gap-2">
                         <CheckIcon
-                            color={`var(${color})`}
-                            className="mt-0.5 flex-shrink-0"
+                            color="white"
+                            className="mt-1.5 ml-[-1rem] flex-shrink-0"
                         />
                         <span>{point}</span>
                     </li>

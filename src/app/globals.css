@@ -5,9 +5,12 @@
     --font-main: var(--font-open-sans);
     --font-signature: var(--font-babylonica);
     --color-primary: #ff7321;
+    --color-primary-darker: #f14128;
     --color-secondary: #010e1e;
     --color-seance-energetique: #82bf62;
+    --color-seance-energetique-darker: #567d46;
     --color-harmonisation: #9747ec;
+    --color-harmonisation-darker: #54179c;
 }
 
 :root {
@@ -64,3 +67,91 @@ nav {
 .signature {
     font-family: var(--font-babylonica);
 }
+
+.gradient-primary {
+    background: linear-gradient(
+        to right,
+        var(--color-primary),
+        var(--color-primary-darker)
+    );
+    position: relative;
+    z-index: 1;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #be2e1b;
+        z-index: -1;
+        opacity: 0;
+        transition: opacity 0.15s ease-in-out;
+        border-radius: inherit;
+    }
+
+    &:hover::before {
+        opacity: 1;
+    }
+}
+
+.gradient-seance-energetique {
+    background: linear-gradient(
+        to right,
+        var(--color-seance-energetique),
+        var(--color-seance-energetique-darker)
+    );
+    position: relative;
+    z-index: 1;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #3e7045;
+        z-index: -1;
+        opacity: 0;
+        transition: opacity 0.15s ease-in-out;
+        border-radius: inherit;
+    }
+
+    &:hover::before {
+        opacity: 1;
+    }
+}
+
+.gradient-harmonisation {
+    background: linear-gradient(
+        to right,
+        var(--color-harmonisation),
+        var(--color-harmonisation-darker)
+    );
+    position: relative;
+    z-index: 1;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #4b248a;
+        z-index: -1;
+        opacity: 0;
+        transition: opacity 0.15s ease-in-out;
+        border-radius: inherit;
+    }
+
+    &:hover::before {
+        opacity: 1;
+    }
+}
+
+/* .grecaptcha-badge {
+    visibility: hidden !important;
+} */

@@ -1,12 +1,13 @@
 import ContactForm from "../components/sections/ContactForm"
-import Testimonials from "../components/sections/Testimonials"
 
 const ContactPage = () => {
     return (
-        <div className="flex flex-col justify-center items-center">
+        <section className="body-text gap-4  flex flex-col  mx-auto justify-center items-center my-48">
+            <h2 className="text-5xl font-heading text-center mb-16">
+                Contactez-moi
+            </h2>
             <ContactForm />
-            <Testimonials />
-        </div>
+        </section>
     )
 }
 

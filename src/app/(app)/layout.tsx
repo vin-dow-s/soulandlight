@@ -5,8 +5,9 @@ import Footer from "./components/sections/Footer"
 import Navigation from "./components/sections/Navigation"
 
 export const metadata: Metadata = {
-    title: "Soulandlight",
-    description: "Discover spiritual guidance and holistic wellness",
+    title: "Soulandlight - Tarologue - Voyant - Medium Channel",
+    description:
+        "Je reçois et transmets les messages de l'univers qui vous sont destinés pour vous aider sur votre chemin de vie. Clarté, apaisement, lumière. Libérez-vous.",
     keywords: ["spiritualité", "tarot", "medium", "voyant", "tirage"],
     authors: [{ name: "Soulandlight" }],
     metadataBase: new URL("https://soulandlight.fr"),

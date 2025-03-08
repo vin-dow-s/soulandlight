@@ -6,17 +6,17 @@ const CheckIcon = ({
     className?: string
 }) => (
     <svg
-        width="16"
-        height="16"
+        width="12"
+        height="12"
         viewBox="0 0 24 24"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
         className={className}
         style={{
-            minWidth: "16px",
-            minHeight: "16px",
-            width: "16px",
-            height: "16px",
+            minWidth: "12px",
+            minHeight: "12px",
+            width: "12px",
+            height: "12px",
             flexShrink: 0,
         }}
     >

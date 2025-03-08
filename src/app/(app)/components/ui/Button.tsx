@@ -6,37 +6,34 @@ type ButtonProps = {
     disabled?: boolean
 }
 
-const Button: React.FC<ButtonProps> = ({
+const Button = ({
     variant,
     onClick,
     type,
     children,
     disabled,
-}) => {
+}: ButtonProps) => {
     const baseClasses =
-        "px-6 py-3 rounded-lg font-base focus:outline-none cursor-pointer font-main transition-colors"
+        "px-6 py-3 rounded-lg font-base focus:outline-none cursor-pointer font-main relative"
 
     let variantClasses = ""
     switch (variant) {
         case "cta":
             variantClasses =
-                "bg-[var(--color-primary)] text-white hover:bg-[var(--color-primary)]/90"
+                "gradient-primary text-white flex items-center gap-2"
             break
         case "secondary":
             variantClasses =
-                "bg-gray-200 text-(--color-secondary) hover:bg-gray-300 w-full"
+                "bg-gray-200 text-[var(--color-secondary)] hover:bg-gray-400 w-full transition-colors"
             break
         case "energetique":
-            variantClasses =
-                "bg-[var(--color-seance-energetique)] text-white hover:bg-[var(--color-seance-energetique)]/75 w-full"
+            variantClasses = "gradient-seance-energetique text-white w-full"
             break
         case "guidance":
-            variantClasses =
-                "bg-[var(--color-primary)] text-white hover:bg-[var(--color-primary)]/90 w-full"
+            variantClasses = "gradient-primary text-white w-full"
             break
         case "harmonisation":
-            variantClasses =
-                "bg-[var(--color-harmonisation)] text-white hover:bg-[var(--color-harmonisation)]/75 w-full"
+            variantClasses = "gradient-harmonisation text-white w-full"
             break
         default:
             variantClasses =

@@ -43,6 +43,12 @@ const Navigation = () => {
                             Services
                         </Link>
                         <Link
+                            href="/#avis"
+                            className="text-white hover:text-primary font-medium transition-colors"
+                        >
+                            Avis
+                        </Link>
+                        <Link
                             href="/#a-propos"
                             className="text-white hover:text-primary font-medium transition-colors"
                         >
@@ -62,7 +68,7 @@ const Navigation = () => {
                             Galerie
                         </Link> */}
                         <Link
-                            href="/"
+                            href="/contact"
                             className="text-white hover:text-primary font-medium transition-colors"
                         >
                             Contactez-moi

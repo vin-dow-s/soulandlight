@@ -1,12 +1,13 @@
 "use client"
 
 import { zodResolver } from "@hookform/resolvers/zod"
+import { ReCaptchaProvider, useReCaptcha } from "next-recaptcha-v3"
+import Link from "next/link"
 import { useState } from "react"
 import { SubmitHandler, useForm } from "react-hook-form"
 import { z } from "zod"
 import Button from "../ui/Button"
 
-// Define form validation schema with Zod
 const contactSchema = z.object({
     name: z
         .string()
@@ -19,13 +20,15 @@ const contactSchema = z.object({
     }),
 })
 
-// Type for our form data
 type ContactFormData = z.infer<typeof contactSchema>
 
 const ContactForm = () => {
     const [isSubmitting, setIsSubmitting] = useState(false)
     const [submitSuccess, setSubmitSuccess] = useState(false)
     const [submitError, setSubmitError] = useState<string | null>(null)
+    const [captchaLoaded, setCaptchaLoaded] = useState(false)
+
+    const { executeRecaptcha } = useReCaptcha()
 
     const {
         register,
@@ -46,23 +49,29 @@ const ContactForm = () => {
         setSubmitError(null)
 
         try {
-            // Replace with your actual form submission API endpoint
+            const token = await executeRecaptcha("form_submit")
+
             const response = await fetch("/api/contact", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
                 },
-                body: JSON.stringify(data),
+                body: JSON.stringify({
+                    ...data,
+                    token,
+                }),
             })
 
             if (!response.ok) {
+                const errorData = await response.json()
                 throw new Error(
-                    "Une erreur est survenue lors de l'envoi du formulaire"
+                    errorData.error ||
+                        "Une erreur est survenue lors de l'envoi du formulaire"
                 )
             }
 
             setSubmitSuccess(true)
-            reset() // Reset form after successful submission
+            reset()
         } catch (error) {
             setSubmitError(
                 error instanceof Error
@@ -76,12 +85,13 @@ const ContactForm = () => {
     }
 
     return (
-        <section className="body-text gap-4 flex flex-col lg:w-[60%] sm:w-[90%] w-[95%] mx-auto justify-center items-center my-64">
+        <>
+            {captchaLoaded && (
+                <ReCaptchaProvider
+                    reCaptchaKey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
+                />
+            )}
             <div className="container mx-auto px-4">
-                <h2 className="text-5xl font-heading text-center mb-16">
-                    Contactez-moi
-                </h2>
-
                 {submitSuccess ? (
                     <div className="max-w-2xl mx-auto p-6 bg-green-50 border border-green-200 rounded-lg">
                         <h3 className="text-xl font-heading text-green-700 mb-2">
@@ -196,7 +206,7 @@ const ContactForm = () => {
                             )}
                         </div>
 
-                        <div className="text-center">
+                        <div className="text-center flex justify-center">
                             <Button
                                 variant="cta"
                                 type="submit"
@@ -230,11 +240,23 @@ const ContactForm = () => {
                                     "Envoyer le message"
                                 )}
                             </Button>
+                            <div className="text-xs text-gray-400">
+                                This site is protected by reCAPTCHA and the
+                                Google{" "}
+                                <Link href="https://policies.google.com/privacy">
+                                    Privacy Policy
+                                </Link>{" "}
+                                and{" "}
+                                <Link href="https://policies.google.com/terms">
+                                    Terms of Service
+                                </Link>{" "}
+                                apply.
+                            </div>
                         </div>
                     </form>
                 )}
             </div>
-        </section>
+        </>
     )
 }
 
