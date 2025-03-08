@@ -32,7 +32,7 @@ const Footer = () => {
                                 </li>
                                 <li>
                                     <Link
-                                        href="tel:+33600000000"
+                                        href="tel:+33617830844"
                                         className="text-xs sm:text-sm items-center text-gray-300 hover:text-white transition-colors flex flex-row"
                                     >
                                         <svg
@@ -113,7 +113,7 @@ const Footer = () => {
                     <p className="text-sm text-gray-400">
                         &copy; {currentYear} Soulandlight. Site et thème par{" "}
                         <Link
-                            href="@mailto:vincent@vindows.fr"
+                            href="mailto:vincent@vindows.fr"
                             className="hover:text-white transition-colors"
                         >
                             Vincent S.

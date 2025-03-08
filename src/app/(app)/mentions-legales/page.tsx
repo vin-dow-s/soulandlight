@@ -1,5 +1,41 @@
 import Link from "next/link"
 
+export const dynamic = "force-static"
+
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL
+
+export const metadata = {
+    title: "Mentions légales",
+    description: "Mentions légales",
+    openGraph: {
+        title: "Mentions légales",
+        description: "Mentions légales",
+        url: `${SITE_URL}/mentions-legales`,
+        type: "website",
+        images: [
+            {
+                url: "/icons/favicon.ico",
+                width: 1200,
+                height: 630,
+                alt: "Mentions légales",
+            },
+            {
+                url: "/icons/favicon.ico",
+                width: 1200,
+                height: 630,
+                alt: "Mentions légales",
+            },
+        ],
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Mentions légales",
+        description: "Mentions légales",
+        images: ["/icons/favicon.ico"],
+    },
+    robots: "noindex, follow",
+}
+
 const MentionsLegales = () => {
     return (
         <section className="body-text gap-4  flex flex-col lg:w-[60%] sm:w-[90%] w-[95%] mx-auto justify-center items-center my-32 sm:my-48">

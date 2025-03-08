@@ -1,5 +1,41 @@
 import ContactForm from "../components/sections/ContactForm"
 
+export const dynamic = "force-static"
+
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL
+
+export const metadata = {
+    title: "Contact",
+    description: "Envoyez-moi un message !",
+    openGraph: {
+        title: "Contact",
+        description: "Envoyez-moi un message !",
+        url: `${SITE_URL}/contact`,
+        type: "website",
+        images: [
+            {
+                url: "/icons/favicon.ico",
+                width: 1200,
+                height: 630,
+                alt: "Contact",
+            },
+            {
+                url: "/icons/favicon.ico",
+                width: 1200,
+                height: 630,
+                alt: "Contact",
+            },
+        ],
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Contact",
+        description: "Envoyez-moi un message !",
+        images: ["/icons/favicon.ico"],
+    },
+    robots: "noindex, follow",
+}
+
 const ContactPage = () => {
     return (
         <section className="body-text gap-4  flex flex-col  mx-auto justify-center items-center my-32 sm:my-48">

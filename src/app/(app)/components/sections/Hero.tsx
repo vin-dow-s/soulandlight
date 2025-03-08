@@ -7,6 +7,12 @@ import Button from "../ui/Button"
 const Hero = () => {
     return (
         <section className="hero flex flex-col lg:flex-row items-center justify-center w-full min-h-[100svh] bg-black pt-16 max-sm:px-1 max-lg:mb-32">
+            {/* 🔍 SEO H1 */}
+            <h1 className="sr-only">
+                Tarologue - Voyant - Medium Channel | Guidance Spirituelle &
+                Énergétique dans le sud-ouest ou en ligne.
+            </h1>
+
             {/* Left Side: Text Content */}
             <div className="flex flex-col text-center lg:text-left items-center lg:items-start  lg:mr-[-8em] max-lg:my-16">
                 {/* Google Reviews Badge */}

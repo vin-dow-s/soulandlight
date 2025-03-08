@@ -1,0 +1,15 @@
+import Link from "next/link"
+import Button from "./(app)/components/ui/Button"
+
+export default async function RoutePage() {
+    return (
+        <section className="body-text gap-4  flex flex-col lg:w-[60%] sm:w-[90%] w-[95%] mx-auto justify-center items-center my-32 sm:my-48">
+            <h2 className="text-4xl sm:text-5xl font-heading  mb-16 sm:mb-32 ">
+                404 - Page non trouvée
+            </h2>
+            <Link href="/" className="main-link">
+                <Button variant="secondary">Retour à la page d'accueil</Button>
+            </Link>
+        </section>
+    )
+}

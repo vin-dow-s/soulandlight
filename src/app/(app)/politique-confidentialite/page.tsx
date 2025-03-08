@@ -1,3 +1,41 @@
+import Link from "next/link"
+
+export const dynamic = "force-static"
+
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL
+
+export const metadata = {
+    title: "Politique de confidentialité",
+    description: "Politique de confidentialité",
+    openGraph: {
+        title: "Politique de confidentialité",
+        description: "Politique de confidentialité",
+        url: `${SITE_URL}/politique-confidentialite`,
+        type: "website",
+        images: [
+            {
+                url: "/icons/favicon.ico",
+                width: 1200,
+                height: 630,
+                alt: "Politique de confidentialité",
+            },
+            {
+                url: "/icons/favicon.ico",
+                width: 1200,
+                height: 630,
+                alt: "Politique de confidentialité",
+            },
+        ],
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Politique de confidentialité",
+        description: "Politique de confidentialité",
+        images: ["/icons/favicon.ico"],
+    },
+    robots: "noindex, follow",
+}
+
 const PolitiqueConfidentialite = () => {
     return (
         <section className="body-text gap-4  flex flex-col lg:w-[60%] sm:w-[90%] w-[95%] mx-auto justify-center items-center my-32 sm:my-48">
@@ -71,9 +109,9 @@ const PolitiqueConfidentialite = () => {
                     site web. Les utilisateurs qui ne savent pas quelles
                     informations sont obligatoires sont invités à me contacter
                     via{" "}
-                    <a href="mailto:pascal.soulandlight@gmail.com">
+                    <Link href="mailto:pascal.soulandlight@gmail.com">
                         pascal.soulandlight@gmail.com
-                    </a>
+                    </Link>
                     .
                 </p>{" "}
                 <h3 className="text-2xl font-heading mt-16 mb-8 w-full">
@@ -159,9 +197,9 @@ const PolitiqueConfidentialite = () => {
                     davantage la présente politique ou pour toute question
                     relative aux droits individuels et à vos informations
                     personnelles, vous pouvez envoyer un courriel à{" "}
-                    <a href="mailto:pascal.soulandlight@gmail.com">
+                    <Link href="mailto:pascal.soulandlight@gmail.com">
                         pascal.soulandlight@gmail.com
-                    </a>
+                    </Link>
                     .
                 </p>
             </div>
