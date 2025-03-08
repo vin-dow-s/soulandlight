@@ -40,8 +40,6 @@ const variantToList = {
 
 const ServiceCard = ({ title, variant, subtitle }: ServiceCardProps) => {
     let color = ""
-    let price = ""
-
     switch (variant) {
         case "energetique":
             color = "--color-seance-energetique"
