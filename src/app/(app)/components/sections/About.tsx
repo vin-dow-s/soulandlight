@@ -3,12 +3,18 @@ import Link from "next/link"
 
 const About = () => {
     return (
-        <section className="body-text gap-4  flex flex-col lg:w-[75%] sm:w-[90%] w-[95%] mx-auto justify-center items-center my-16">
-            <h2 id="a-propos" className="text-5xl font-heading mb-16 ">
-                A propos
+        <section
+            id="a-propos-section"
+            className="body-text flex flex-col lg:w-[75%] sm:w-[90%] w-[95%] mx-auto justify-center items-center sm:my-64 my-16 px-2"
+        >
+            <h2
+                id="a-propos"
+                className="text-4xl sm:text-5xl font-heading mb-8 sm:mb-16"
+            >
+                À propos
             </h2>
-            <div className="flex lg:flex-row gap-12 ">
-                <div className="mt-2">
+            <div className="flex flex-col md:flex-row gap-12 ">
+                <div>
                     <Image
                         src="/pascal2.jpg"
                         alt="Photo Pascal"
@@ -22,14 +28,14 @@ const About = () => {
                         Bonjour, je suis Pascal,
                     </p>
                     <p className="text-gray-300">
-                        j’ai vécu une expérience de mort imminente à l’âge de 9
+                        j'ai vécu une expérience de mort imminente à l'âge de 9
                         ans, suite à laquelle mes perceptions, mes ressentis et
                         mes intuitions se sont développés, puis amplifiés au
                         travers de mes expériences de vie, me guidant à être
                         celui que je suis ici et maintenant.
                     </p>
                     <p className="text-gray-300">
-                        Aujourd’hui tarologue, énergéticien et accompagnant
+                        Aujourd'hui tarologue, énergéticien et accompagnant
                         spirituel,{" "}
                         <span className="text-white">
                             je vous guide sur votre chemin avec clarté et
@@ -42,7 +48,7 @@ const About = () => {
                         besoin.
                     </p> */}
                     <p className="text-gray-300">
-                        Il n’y a pas de hasard si vous êtes ici… Votre âme
+                        Il n'y a pas de hasard si vous êtes ici… Votre âme
                         cherche des réponses, une direction, une libération. À
                         travers le tarot, les guidances et les soins
                         énergétiques,{" "}

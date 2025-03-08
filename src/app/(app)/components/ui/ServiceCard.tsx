@@ -58,29 +58,32 @@ const ServiceCard = ({ title, variant, subtitle }: ServiceCardProps) => {
 
     return (
         <div
-            className={`service-card border rounded-xl shadow-md w-100 p-8`}
+            className={`border rounded-xl shadow-md w-full p-8 flex flex-col justify-between`}
             style={{
                 borderColor: `var(${color})`,
                 boxShadow: `1px 3px 5px 0 var(${color})`,
             }}
         >
             <div className="text-center">
-                <div className="h-28">
+                <div className="mb-10">
                     <h3
                         className={`${
-                            variant == "harmonisation" ? "text-2xl" : "text-3xl"
+                            variant === "harmonisation"
+                                ? "text-xl sm:text-2xl"
+                                : "text-2xl sm:text-3xl"
                         } font-heading`}
                     >
                         {title}
                     </h3>
                     {subtitle && (
-                        <h4 className="text-sm font-heading text-gray-400">
+                        <h4 className="text-sm font-heading text-gray-400 mt-1">
                             {subtitle}
                         </h4>
                     )}
                 </div>
-                <div className="h-24">
-                    <h4 className="text-4xl font-heading">
+                <div className="mt-auto flex justify-center min-h-[3.5rem] mb-10">
+                    {" "}
+                    <h4 className="text-3xl sm:text-4xl font-heading">
                         {variant == "energetique" ||
                         variant == "harmonisation" ? (
                             <div className="flex items-center justify-center">
@@ -99,14 +102,17 @@ const ServiceCard = ({ title, variant, subtitle }: ServiceCardProps) => {
                     </h4>
                 </div>
             </div>
-            <ul className="gap-4 flex flex-col h-80 px-0 p-0">
+            <ul className="gap-4 flex flex-col flex-1 px-0 p-0">
                 {variantToList[
                     variant as keyof typeof variantToList
                 ].points.map((point) => (
-                    <li key={point} className="text-sm flex items-start gap-2">
+                    <li
+                        key={point}
+                        className="text-xs sm:text-sm flex items-start gap-2"
+                    >
                         <CheckIcon
                             color="white"
-                            className="mt-1.5 ml-[-1rem] flex-shrink-0"
+                            className="mt-1 sm:mt-1.5 ml-[-1rem] flex-shrink-0"
                         />
                         <span>{point}</span>
                     </li>

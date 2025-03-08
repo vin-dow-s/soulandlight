@@ -20,7 +20,7 @@ const Button = ({
     switch (variant) {
         case "cta":
             variantClasses =
-                "gradient-primary text-white flex items-center gap-2"
+                "gradient-primary text-white flex justify-center items-center gap-2 max-sm:w-full w-fit"
             break
         case "secondary":
             variantClasses =

@@ -11,11 +11,19 @@ const Navigation = () => {
         setIsMenuOpen(!isMenuOpen)
     }
 
+    const closeMenu = () => {
+        setIsMenuOpen(false)
+    }
+
     return (
-        <nav className="fixed top-0 left-0 right-0 z-50 bg-transparent backdrop-blur-sm p-4 px-8 h-20">
+        <nav className="fixed top-0 left-0 right-0 z-50 bg-transparent backdrop-blur-sm p-4 sm:px-8 h-20">
             <div className="flex justify-between items-center ">
-                <Link href="/" className=" text-white font-light ">
-                    <div className="flex items-center gap-4">
+                <Link
+                    href="/"
+                    className=" text-white font-light "
+                    onClick={closeMenu}
+                >
+                    <div className="flex items-center gap-2 sm:gap-4">
                         <Image
                             src="/metatron.png"
                             alt="Logo"
@@ -23,12 +31,15 @@ const Navigation = () => {
                             height={48}
                         />
                         <div className="flex flex-col">
-                            <h2 className="text-2xl">
-                                SOUL<span className="text-lg ml-1">and</span>
+                            <h2 className="text-xl sm:text-2xl">
+                                SOUL
+                                <span className="text-base sm:text-lg ml-1">
+                                    and
+                                </span>
                                 LIGHT
                             </h2>
-                            <h3 className="text-xs font-medium">
-                                Tarologue - Voyant - Medium Channel Spirituel
+                            <h3 className="text-[10px] sm:text-xs font-medium">
+                                Tarologue - Voyant - Medium Channel
                             </h3>{" "}
                         </div>
                     </div>
@@ -52,7 +63,7 @@ const Navigation = () => {
                             href="/#a-propos"
                             className="text-white hover:text-primary font-medium transition-colors"
                         >
-                            A propos
+                            À propos
                         </Link>
 
                         {/* <Link
@@ -71,7 +82,7 @@ const Navigation = () => {
                             href="/contact"
                             className="text-white hover:text-primary font-medium transition-colors"
                         >
-                            Contactez-moi
+                            Contact
                         </Link>
                     </div>
                 </div>
@@ -79,7 +90,7 @@ const Navigation = () => {
                     <button
                         onClick={toggleMenu}
                         className="inline-flex items-center justify-center p-2 rounded-md text-white hover:text-primary focus:outline-none"
-                        aria-expanded="false"
+                        aria-expanded={isMenuOpen}
                     >
                         <span className="sr-only">Open main menu</span>
                         <svg
@@ -122,36 +133,48 @@ const Navigation = () => {
 
             {/* Mobile menu */}
             <div className={`${isMenuOpen ? "block" : "hidden"} md:hidden`}>
-                <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-black/80 backdrop-blur-sm mt-2 rounded-lg">
+                <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-(--color-secondary) backdrop-blur-sm mt-2 rounded-lg">
                     <Link
-                        href="/"
+                        href="/#services"
                         className="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-primary"
+                        onClick={closeMenu}
                     >
                         Services
                     </Link>
                     <Link
-                        href="/about"
+                        href="/#a-propos"
                         className="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-primary"
+                        onClick={closeMenu}
                     >
-                        A propos
+                        À propos
                     </Link>
                     <Link
+                        href="/#avis"
+                        className="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-primary"
+                        onClick={closeMenu}
+                    >
+                        Avis
+                    </Link>
+                    {/* <Link
                         href="/tirages-2025"
                         className="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-primary"
+                        onClick={closeMenu}
                     >
                         Tirages 2025
                     </Link>
                     <Link
                         href="/galerie"
                         className="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-primary"
+                        onClick={closeMenu}
                     >
                         Galerie
-                    </Link>
+                    </Link> */}
                     <Link
                         href="/contact"
                         className="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-primary"
+                        onClick={closeMenu}
                     >
-                        Contactez-moi
+                        Contact
                     </Link>
                 </div>
             </div>

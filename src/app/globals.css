@@ -11,6 +11,7 @@
     --color-seance-energetique-darker: #567d46;
     --color-harmonisation: #9747ec;
     --color-harmonisation-darker: #54179c;
+    --navbar-height: 5rem; /* 80px (h-20) */
 }
 
 :root {
@@ -25,10 +26,30 @@
     }
 }
 
+@layer utilities {
+    @media (max-width: 1300px) {
+        .grid-cols-custom {
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        }
+    }
+}
+
 body {
     color: var(--foreground);
     background: var(--color-secondary);
     font-family: var(--font-main);
+    scroll-padding-top: var(--navbar-height);
+}
+
+/* Apply scroll margin to section headings with IDs (for anchor links) */
+section[id] {
+    scroll-margin-top: var(--navbar-height);
+}
+
+h2[id],
+h3[id],
+h4[id] {
+    scroll-margin-top: calc(var(--navbar-height) + 1rem);
 }
 
 nav {
@@ -152,6 +173,6 @@ nav {
     }
 }
 
-/* .grecaptcha-badge {
+.grecaptcha-badge {
     visibility: hidden !important;
-} */
+}

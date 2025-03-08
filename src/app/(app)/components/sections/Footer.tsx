@@ -16,20 +16,16 @@ const Footer = () => {
                                 <li>
                                     <Link
                                         href="mailto:pascal.soulandlight@gmail.com"
-                                        className="text-sm items-center text-gray-300 hover:text-white transition-colors flex flex-row"
+                                        className="text-xs sm:text-sm items-center text-gray-300 hover:text-white transition-colors flex flex-row"
                                     >
                                         <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            className="h-5 w-5 mr-2 text-white"
+                                            className="h-5 w-5 mr-2"
+                                            fill="currentColor"
                                             viewBox="0 0 24 24"
-                                            fill="none"
-                                            stroke="currentColor"
-                                            strokeWidth="2"
-                                            strokeLinecap="round"
-                                            strokeLinejoin="round"
+                                            aria-hidden="true"
                                         >
-                                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                                            <polyline points="22,6 12,13 2,6"></polyline>
+                                            <path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z" />
+                                            <path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z" />
                                         </svg>
                                         pascal.soulandlight@gmail.com
                                     </Link>
@@ -37,19 +33,19 @@ const Footer = () => {
                                 <li>
                                     <Link
                                         href="tel:+33600000000"
-                                        className="text-sm items-center text-gray-300 hover:text-white transition-colors flex flex-row"
+                                        className="text-xs sm:text-sm items-center text-gray-300 hover:text-white transition-colors flex flex-row"
                                     >
                                         <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            className="h-5 w-5 mr-2 text-white"
+                                            className="h-5 w-5 mr-2"
+                                            fill="currentColor"
                                             viewBox="0 0 24 24"
-                                            fill="none"
-                                            stroke="currentColor"
-                                            strokeWidth="2"
-                                            strokeLinecap="round"
-                                            strokeLinejoin="round"
+                                            aria-hidden="true"
                                         >
-                                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                            <path
+                                                fillRule="evenodd"
+                                                d="M1.5 4.5a3 3 0 013-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 01-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 006.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 011.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 01-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5z"
+                                                clipRule="evenodd"
+                                            />
                                         </svg>
                                         06 17 83 08 44
                                     </Link>
@@ -67,11 +63,11 @@ const Footer = () => {
                                         href="https://www.facebook.com/p/Soulandlight-Tarot-100075887629554/"
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="flex flex-row text-gray-300 hover:text-white text-sm transition-colors"
+                                        className="flex flex-row text-gray-300 hover:text-white text-xs sm:text-sm transition-colors"
                                         aria-label="Facebook"
                                     >
                                         <svg
-                                            className="h-6 w-6 mr-2"
+                                            className="h-5 w-5 mr-2"
                                             fill="currentColor"
                                             viewBox="0 0 24 24"
                                             aria-hidden="true"
@@ -90,11 +86,11 @@ const Footer = () => {
                                         href="https://www.youtube.com/watch?v=H9fWC78Dhjs"
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="flex flex-row text-gray-300 hover:text-white text-sm transition-colors"
+                                        className="flex flex-row text-gray-300 hover:text-white text-xs sm:text-sm transition-colors"
                                         aria-label="YouTube"
                                     >
                                         <svg
-                                            className="h-6 w-6 mr-2"
+                                            className="h-5 w-5 mr-2"
                                             fill="currentColor"
                                             viewBox="0 0 24 24"
                                             aria-hidden="true"
