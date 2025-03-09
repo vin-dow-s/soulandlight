@@ -37,14 +37,13 @@ export async function POST(req: Request) {
 
         // Send email using Resend
         const { data, error } = await resend.emails.send({
-            from: "no-reply@soulandlight.fr",
-            to:
-                process.env.NOTIFICATION_EMAIL ||
-                "pascal.soulandlight@gmail.com",
+            from: "Soulandlight <no-reply@soulandlight.fr>",
+            to: "pascal.soulandlight@gmail.com",
             subject: `Nouveau message de ${name}`,
             text: `
 Nom: ${name}
 Email: ${email}
+
 Message:
 ${message}
             `,

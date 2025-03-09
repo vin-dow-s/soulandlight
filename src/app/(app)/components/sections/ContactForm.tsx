@@ -145,12 +145,14 @@ const ContactFormContent = () => {
                         Merci pour votre message. Je vous répondrai dans les
                         plus brefs délais.
                     </p>
-                    <button
-                        onClick={() => setSubmitSuccess(false)}
-                        className="px-4 py-2 bg-gray-200 text-(--color-secondary) rounded hover:bg-gray-400 transition-colors cursor-pointer"
+                    <Link href="/">
+                        <button
+                            onClick={() => setSubmitSuccess(false)}
+                            className="px-4 py-2 bg-gray-200 text-(--color-secondary) rounded hover:bg-gray-400 transition-colors cursor-pointer"
                     >
-                        Envoyer un autre message
+                        Retour à la page d'accueil
                     </button>
+                    </Link>
                 </div>
             ) : (
                 <form
