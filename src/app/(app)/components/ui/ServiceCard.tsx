@@ -1,10 +1,11 @@
-import Link from "next/link"
-import Button from "./Button"
+import { ButtonVariant } from "@/lib/utils/buttonStyles"
+import ButtonLink from "./ButtonLink"
 import CheckIcon from "./CheckIcon"
+import GuidanceBookingButton from "./GuidanceBookingButton"
 
 type ServiceCardProps = {
     title: string
-    variant: "cta" | "secondary" | "energetique" | "guidance" | "harmonisation"
+    variant: ButtonVariant
     subtitle?: string
 }
 
@@ -14,7 +15,6 @@ const variantToList = {
             "Libération de vos blocages énergétiques et harmonisation de vos chakras",
             "Libération karmique et transgénérationnelle",
             "Rééquilibrage et augmentation de votre taux vibratoire",
-            "Activation de votre potentiel bien-être intérieur",
             "Aide à vaincre les différentes addictions et dépendances (Tabac, Alcool...)",
             "Accompagnement spirituel et émotionnel sur votre chemin de croissance et d'alignement divin",
         ],
@@ -116,10 +116,18 @@ const ServiceCard = ({ title, variant, subtitle }: ServiceCardProps) => {
                     </li>
                 ))}
             </ul>
-            <div className="flex justify-center items-center mt-16">
-                <Link href="/contact" className="w-full">
-                    <Button variant={variant}>Contactez-moi</Button>
-                </Link>
+            <div className="flex justify-center items-center mt-16 ">
+                {variant === "guidance" ? (
+                    <div className="w-full">
+                        <GuidanceBookingButton />
+                    </div>
+                ) : (
+                    <div className="w-full">
+                        <ButtonLink href="/contact" variant={variant}>
+                            Contactez-moi
+                        </ButtonLink>
+                    </div>
+                )}
             </div>
         </div>
     )

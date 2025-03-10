@@ -1,5 +1,9 @@
+"use client"
+
+import { ButtonVariant, getButtonStyles } from "@/lib/utils/buttonStyles"
+
 type ButtonProps = {
-    variant: "cta" | "secondary" | "energetique" | "guidance" | "harmonisation"
+    variant: ButtonVariant
     onClick?: () => void
     children: React.ReactNode
     type?: "button" | "submit" | "reset"
@@ -13,39 +17,14 @@ const Button = ({
     children,
     disabled,
 }: ButtonProps) => {
-    const baseClasses =
-        "px-6 py-3 rounded-lg font-base focus:outline-none cursor-pointer font-main relative"
-
-    let variantClasses = ""
-    switch (variant) {
-        case "cta":
-            variantClasses =
-                "gradient-primary text-white flex justify-center items-center gap-2 max-sm:w-full w-fit"
-            break
-        case "secondary":
-            variantClasses =
-                "bg-gray-200 text-[var(--color-secondary)] hover:bg-gray-400 w-full transition-colors"
-            break
-        case "energetique":
-            variantClasses = "gradient-seance-energetique text-white w-full"
-            break
-        case "guidance":
-            variantClasses = "gradient-primary text-white w-full"
-            break
-        case "harmonisation":
-            variantClasses = "gradient-harmonisation text-white w-full"
-            break
-        default:
-            variantClasses =
-                "bg-[var(--color-primary)] text-white hover:bg-[var(--color-primary)]/75"
-            break
-    }
+    const { combinedClasses } = getButtonStyles(variant)
 
     return (
         <button
-            className={`${baseClasses} ${variantClasses}`}
+            className={combinedClasses}
             onClick={onClick}
             type={type}
+            disabled={disabled}
         >
             {children}
         </button>

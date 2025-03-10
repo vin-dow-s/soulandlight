@@ -18,12 +18,12 @@ const Services = () => {
                 <ServiceCard
                     title="Séance Energétique"
                     variant="energetique"
-                    subtitle="Travail à distance (personnes & animaux)"
+                    subtitle="Travail à distance avec suivi"
                 />
                 <ServiceCard
                     title="Guidance"
                     variant="guidance"
-                    subtitle="En ligne ou en présentiel"
+                    subtitle="Telephone ou visio"
                 />
                 <ServiceCard
                     title="Energétisation & Harmonisation des lieux"

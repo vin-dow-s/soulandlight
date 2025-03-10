@@ -1,9 +1,8 @@
-import Link from "next/link"
 import About from "./components/sections/About"
 import Hero from "./components/sections/Hero"
 import Services from "./components/sections/Services"
 import Testimonials from "./components/sections/Testimonials"
-import Button from "./components/ui/Button"
+import ButtonLink from "./components/ui/ButtonLink"
 
 const HomePage = () => {
     return (
@@ -16,9 +15,9 @@ const HomePage = () => {
                 <h4 className="text-sm sm:text-base font-main">
                     Vous avez des questions ou envie d'en savoir plus ?
                 </h4>
-                <Link href="/contact">
-                    <Button variant="secondary">Contactez-moi</Button>
-                </Link>
+                <ButtonLink href="/contact" variant="secondary">
+                    Contactez-moi
+                </ButtonLink>
             </div>
         </>
     )

@@ -1,8 +1,7 @@
 import Image from "next/image"
-import Link from "next/link"
 import { IoIosArrowRoundForward, IoIosEye, IoMdHeart } from "react-icons/io"
 import { MdEmojiEmotions } from "react-icons/md"
-import Button from "../ui/Button"
+import ButtonLink from "../ui/ButtonLink"
 
 const Hero = () => {
     return (
@@ -64,12 +63,10 @@ const Hero = () => {
                 </div>
 
                 {/* CTA */}
-                <Link href="/#services">
-                    <Button variant="cta">
-                        Découvrir mes services
-                        <IoIosArrowRoundForward className="w-6 h-6" />
-                    </Button>
-                </Link>
+                <ButtonLink href="/#services" variant="cta">
+                    Découvrir mes services
+                    <IoIosArrowRoundForward className="w-6 h-6" />
+                </ButtonLink>
             </div>
 
             {/* Right Side: Image (Shrinks Responsively) */}

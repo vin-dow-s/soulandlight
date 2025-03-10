@@ -1,5 +1,4 @@
-import Link from "next/link"
-import Button from "./(app)/components/ui/Button"
+import ButtonLink from "./(app)/components/ui/ButtonLink"
 
 export default async function RoutePage() {
     return (
@@ -7,9 +6,9 @@ export default async function RoutePage() {
             <h2 className="text-4xl sm:text-5xl font-heading  mb-16 sm:mb-32 ">
                 404 - Page non trouvée
             </h2>
-            <Link href="/" className="main-link">
-                <Button variant="secondary">Retour à la page d'accueil</Button>
-            </Link>
+            <ButtonLink href="/" variant="secondary">
+                Retour à la page d'accueil
+            </ButtonLink>
         </section>
     )
 }
