@@ -260,7 +260,7 @@ const ContactFormContent = () => {
                         </div>
                         <div className="flex justify-center">
                             <Button
-                                variant="cta"
+                                variant="submit"
                                 type="submit"
                                 disabled={isSubmitting || !recaptchaReady}
                             >

@@ -1,4 +1,4 @@
-export type ButtonVariant = "cta" | "secondary" | "energetique" | "guidance" | "harmonisation"
+export type ButtonVariant = "cta" | "submit" | "secondary" | "energetique" | "guidance" | "harmonisation"
 
 /**
  * Get button styles based on variant
@@ -11,10 +11,13 @@ export const getButtonStyles = (variant: ButtonVariant) => {
   let variantClasses = ""
   switch (variant) {
     case "cta":
-      variantClasses = "gradient-primary text-white flex justify-center items-center gap-2 max-sm:w-full w-fit"
+      variantClasses = "gradient-primary text-white flex justify-center items-center gap-2  w-fit"
+      break
+    case "submit":
+      variantClasses = "gradient-primary text-white flex justify-center items-center gap-2  w-full"
       break
     case "secondary":
-      variantClasses = "bg-gray-200 text-[var(--color-secondary)] hover:bg-gray-400 w-full transition-colors"
+      variantClasses = "bg-gray-200 text-[var(--color-secondary)] hover:bg-gray-400 w-fit transition-colors"
       break
     case "energetique":
       variantClasses = "gradient-seance-energetique text-white w-full"
