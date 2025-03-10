@@ -14,13 +14,13 @@ export const metadata = {
         type: "website",
         images: [
             {
-                url: "/icons/favicon.ico",
+                url: `${SITE_URL}/assets/hero-preview.webp`,
                 width: 1200,
                 height: 630,
                 alt: "Contact",
             },
             {
-                url: "/icons/favicon.ico",
+                url: `${SITE_URL}/assets/hero-preview.webp`,
                 width: 1200,
                 height: 630,
                 alt: "Contact",
@@ -31,7 +31,7 @@ export const metadata = {
         card: "summary_large_image",
         title: "Contact",
         description: "Envoyez-moi un message !",
-        images: ["/icons/favicon.ico"],
+        images: [`${SITE_URL}/assets/hero-preview.webp`],
     },
     robots: "noindex, follow",
 }

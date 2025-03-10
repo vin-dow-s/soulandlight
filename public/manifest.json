@@ -12,6 +12,22 @@
             "src": "/icons/favicon.ico",
             "sizes": "48x48",
             "type": "image/x-icon"
+        },
+        {
+            "src": "/assets/metatron-192x192.webp",
+            "sizes": "192x192",
+            "type": "image/webp"
+        },
+        {
+            "src": "/assets/metatron-512x512.webp",
+            "sizes": "512x512",
+            "type": "image/webp"
+        },
+        {
+            "src": "/assets/metatron-512x512-maskable.webp",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable"
         }
     ]
 }

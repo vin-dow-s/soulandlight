@@ -13,14 +13,14 @@ const About = () => {
             >
                 À propos
             </h2>
-            <div className="flex flex-col md:flex-row gap-12 ">
+            <div className="flex flex-col xl:flex-row gap-8 ">
                 <div>
                     <Image
-                        src="/assets/pascal2.jpg"
+                        src="/assets/pascal2.webp"
                         alt="Photo Pascal"
-                        className="rounded-lg"
-                        width={1000}
-                        height={1000}
+                        className="rounded-lg max-w-[650px] min-w-[400px] w-full"
+                        width={650}
+                        height={650}
                     />
                 </div>
                 <div className="flex flex-col gap-4">

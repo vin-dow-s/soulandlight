@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     },
     description:
         "Je reçois et transmets les messages de l'univers qui vous sont destinés pour vous aider sur votre chemin de vie. Clarté, apaisement, lumière. Libérez-vous.",
-    keywords: ["spiritualité", "tarot", "medium", "voyant", "tirage"],
+    keywords: ["tarot", "medium", "voyant", "spirituel", "tirage", "consultation"],
     openGraph: {
         title: `Soulandlight`,
         description:
@@ -24,13 +24,13 @@ export const metadata: Metadata = {
         type: "website",
         images: [
             {
-                url: `${SITE_URL}/icons/favicon.ico`,
+                url: `${SITE_URL}/assets/hero-preview.webp`,
                 width: 1200,
                 height: 630,
                 alt: `Soulandlight`,
             },
             {
-                url: `${SITE_URL}/icons/favicon.ico`,
+                url: `${SITE_URL}/assets/hero-preview.webp`,
                 width: 1200,
                 height: 630,
                 alt: `Soulandlight`,
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
         title: `Soulandlight`,
         description:
             "Je reçois et transmets les messages de l'univers qui vous sont destinés pour vous aider sur votre chemin de vie. Clarté, apaisement, lumière. Libérez-vous.",
-        images: [`${SITE_URL}/icons/favicon.ico`],
+        images: [`${SITE_URL}/assets/hero-preview.webp`],
     },
 }
 

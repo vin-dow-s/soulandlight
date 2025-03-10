@@ -14,13 +14,13 @@ export const metadata = {
         type: "website",
         images: [
             {
-                url: "/icons/favicon.ico",
+                url: `${SITE_URL}/assets/hero-preview.webp`,
                 width: 1200,
                 height: 630,
                 alt: "Politique de confidentialité",
             },
             {
-                url: "/icons/favicon.ico",
+                url: `${SITE_URL}/assets/hero-preview.webp`,
                 width: 1200,
                 height: 630,
                 alt: "Politique de confidentialité",
@@ -31,7 +31,7 @@ export const metadata = {
         card: "summary_large_image",
         title: "Politique de confidentialité",
         description: "Politique de confidentialité",
-        images: ["/icons/favicon.ico"],
+        images: [`${SITE_URL}/assets/hero-preview.webp`],
     },
     robots: "noindex, follow",
 }
