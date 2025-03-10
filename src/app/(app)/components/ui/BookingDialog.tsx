@@ -64,7 +64,7 @@ const BookingDialog = ({ isOpen, onClose }: BookingDialogProps) => {
             >
                 {/* Header */}
                 <div className="flex justify-between items-center p-4 border-b border-gray-700 mb-4">
-                    <h3 className="text-lg font-main text-white">Réserver votre guidance</h3>
+                    <h3 className="text-lg font-main text-white">Réserver votre consultation</h3>
                     <button 
                         onClick={onClose}
                         className="text-gray-400 hover:text-white focus:outline-none cursor-pointer"
