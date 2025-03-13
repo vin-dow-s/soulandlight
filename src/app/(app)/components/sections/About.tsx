@@ -13,8 +13,8 @@ const About = () => {
             >
                 À propos
             </h2>
-            <div className="flex flex-col xl:flex-row gap-8 ">
-                <div className="w-full">
+            <div className="flex flex-col xl:flex-row gap-16 ">
+                <div className="w-full flex flex-col gap-4 text-center">
                     <Image
                         src="/assets/pascal2.webp"
                         alt="Photo Pascal"
@@ -22,6 +22,9 @@ const About = () => {
                         width={650}
                         height={650}
                     />
+                    <p className="text-gray-300 text-xs sm:text-sm max-sm:text-center min-[1280px]:text-center text-left">
+                        Il n'y a pas de hasard si vous êtes ici… Votre âme
+                        cherche des réponses, une direction, une libération.</p>
                 </div>
                 <div className="flex flex-col gap-4">
                     <p className="text-lg font-semibold">
@@ -39,7 +42,7 @@ const About = () => {
                         spirituel,{" "}
                         <span className="text-white">
                             je vous guide sur votre chemin avec clarté et
-                            bienveillance.
+                            bienveillance en mettant ma connexion au service de votre évolution.
                         </span>
                     </p>
                     {/* <p className="font-semibold my-4">
@@ -48,20 +51,9 @@ const About = () => {
                         besoin.
                     </p> */}
                     <p className="text-gray-300">
-                        Il n'y a pas de hasard si vous êtes ici… Votre âme
-                        cherche des réponses, une direction, une libération. À
-                        travers le tarot, les guidances et les soins
-                        énergétiques,{" "}
                         <span className="text-white">
-                            je mets ma connexion au service de votre évolution.
-                        </span>
-                    </p>
-                    <p className="text-gray-300">
-                        <span className="text-white">
-                            Je vous aide à éclairer votre chemin
-                        </span>
-                        , à libérer ce qui freine votre épanouissement et à
-                        retrouver votre alignement profond. Mon approche va
+                            Je vous aide à éclairer votre chemin, à libérer ce qui freine votre épanouissement et à
+                        retrouver votre alignement profond.</span> <br className="sm:hidden" /><br className="sm:hidden" /> Mon approche va
                         au-delà des prédictions : elle est une invitation à la
                         transformation, à la reconnexion à votre essence et à
                         votre lumière intérieure.

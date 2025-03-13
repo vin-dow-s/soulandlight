@@ -56,12 +56,17 @@ const ServiceCard = ({ title, variant, subtitle }: ServiceCardProps) => {
 
     return (
         <div
-            className={`border rounded-xl shadow-md w-full p-8 flex flex-col justify-between`}
+            className={`border rounded-xl shadow-md w-full p-8 flex flex-col justify-between relative`}
             style={{
                 borderColor: `var(${color})`,
                 boxShadow: `1px 3px 5px 0 var(${color})`,
             }}
         >
+            {/* {variant === "guidance" && (
+                <div className="absolute top-2 right-2 text-gray-500 rounded-full border p-1 px-3 text-xs h-7 w-7 flex items-center justify-center cursor-help">
+                    ?
+                </div>
+            )} */}
             <div className="text-center">
                 <div className="mb-10">
                     <h3
