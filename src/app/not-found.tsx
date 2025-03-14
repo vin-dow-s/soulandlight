@@ -1,4 +1,4 @@
-import ButtonLink from "./(app)/components/ui/ButtonLink"
+import ButtonLink from "./components/ui/ButtonLink"
 
 export default async function RoutePage() {
     return (

@@ -1,7 +1,7 @@
 import { babylonica, juliusSansOne, openSans } from "@/lib/fonts"
 import type { Metadata } from "next"
-import Footer from "./(app)/components/sections/Footer"
-import Navigation from "./(app)/components/sections/Navigation"
+import Footer from "./components/sections/Footer"
+import Navigation from "./components/sections/Navigation"
 import "./globals.css"
 
 export const dynamic = "force-static"
@@ -15,7 +15,14 @@ export const metadata: Metadata = {
     },
     description:
         "Je reçois et transmets les messages de l'univers qui vous sont destinés pour vous aider sur votre chemin de vie. Clarté, apaisement, lumière. Libérez-vous.",
-    keywords: ["tarot", "medium", "voyant", "spirituel", "tirage", "consultation"],
+    keywords: [
+        "tarot",
+        "medium",
+        "voyant",
+        "spirituel",
+        "tirage",
+        "consultation",
+    ],
     openGraph: {
         title: `Soulandlight`,
         description:
