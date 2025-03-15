@@ -135,7 +135,7 @@ const ContactFormContent = () => {
     }
 
     return (
-        <div className="container mx-auto px-4">
+        <div>
             {submitSuccess ? (
                 <div className="max-w-2xl mx-auto p-6  border border-green-300 rounded-lg">
                     <h3 className="text-xl font-heading text-green-500 mb-2">
@@ -149,17 +149,13 @@ const ContactFormContent = () => {
                         <button
                             onClick={() => setSubmitSuccess(false)}
                             className="px-4 py-2 bg-gray-200 text-(--color-secondary) rounded hover:bg-gray-400 transition-colors cursor-pointer"
-                    >
-                        Retour à la page d'accueil
-                    </button>
+                        >
+                            Retour à la page d'accueil
+                        </button>
                     </Link>
                 </div>
             ) : (
-                <form
-                    onSubmit={handleSubmit(onSubmit)}
-                    className="max-w-2xl mx-auto"
-                    noValidate
-                >
+                <form onSubmit={handleSubmit(onSubmit)} noValidate>
                     {submitError && (
                         <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg text-red-700">
                             {submitError}
@@ -177,7 +173,7 @@ const ContactFormContent = () => {
                             <input
                                 id="name"
                                 type="text"
-                                className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:outline-none ${
+                                className={`bg-white w-full px-4 py-3 border rounded-lg focus:ring-2 focus:outline-none text-black ${
                                     errors.name
                                         ? "border-red-500 focus:ring-red-200"
                                         : "border-gray-300 focus:ring-primary/20"
@@ -203,7 +199,7 @@ const ContactFormContent = () => {
                             <input
                                 id="email"
                                 type="email"
-                                className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:outline-none ${
+                                className={`bg-white w-full px-4 py-3 border rounded-lg focus:ring-2  focus:outline-none text-black ${
                                     errors.email
                                         ? "border-red-500 focus:ring-red-200"
                                         : "border-gray-300 focus:ring-primary/20"
@@ -230,7 +226,7 @@ const ContactFormContent = () => {
                         <textarea
                             id="message"
                             rows={6}
-                            className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:outline-none ${
+                            className={`bg-white w-full px-4 py-3 border rounded-lg focus:ring-2 focus:outline-none text-black ${
                                 errors.message
                                     ? "border-red-500 focus:ring-red-200"
                                     : "border-gray-300 focus:ring-primary/20"
