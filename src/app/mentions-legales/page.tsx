@@ -102,7 +102,7 @@ const MentionsLegales = () => {
                     </p>
                     <p className="w-full">
                         Hébergeur : <br />
-                        OVH - SAS au capital de 10 174 560 €<br />
+                        OVH - SAS au capital de 50 000 000 €<br />
                         RCS Lille Métropole 424 761 419 00045
                         <br />
                         Code APE 2620Z
