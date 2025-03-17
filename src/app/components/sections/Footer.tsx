@@ -33,7 +33,7 @@ const Footer = () => {
                                 <li>
                                     <Link
                                         href="tel:+33617830844"
-                                        className="text-xs sm:text-sm items-center text-gray-300 hover:text-white transition-colors flex flex-row"
+                                        className="text-xs sm:text-sm items-center text-gray-300 hover:text-white transition-colors flex flex-row w-fit"
                                     >
                                         <svg
                                             className="h-5 w-5 mr-2"
@@ -86,7 +86,7 @@ const Footer = () => {
                                         href="https://www.youtube.com/watch?v=H9fWC78Dhjs"
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="flex flex-row text-gray-300 hover:text-white text-xs sm:text-sm transition-colors"
+                                        className="flex flex-row w-fit text-gray-300 hover:text-white text-xs sm:text-sm transition-colors"
                                         aria-label="YouTube"
                                     >
                                         <svg
