@@ -93,7 +93,7 @@ const Testimonials = () => {
     return (
         <section
             id="avis-section"
-            className="body-text flex flex-col w-full mx-auto justify-center items-center sm:my-64 my-32 px-4"
+            className="body-text flex flex-col w-full mx-auto justify-center items-center sm:mt-96 mt-64 px-4"
         >
             <h2
                 id="avis"
