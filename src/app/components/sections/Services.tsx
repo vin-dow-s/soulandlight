@@ -30,12 +30,12 @@ const Services = () => {
                     variant="harmonisation"
                 />
             </div>
-            <div className="flex flex-col gap-2 justify-center items-center mt-4">
-                <p className="text-xs sm:text-sm text-gray-400">
-                    * Selon votre situation, la meilleure solution pour vous
-                    vous sera proposée.
+            <div className="flex flex-col gap-2 justify-center items-center mt-6 text-center max-w-2xl">
+                <p className="text-xs text-gray-400">
+                    * Selon votre situation, je vous proposerai ce qui vous
+                    convient le mieux.
                 </p>
-                <p className="text-xs sm:text-sm text-gray-400">
+                <p className="text-xs text-gray-400">
                     Ces services ne se substituent pas à l'avis d'un
                     professionnel de santé ou à un traitement médical.
                 </p>

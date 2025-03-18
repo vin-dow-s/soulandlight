@@ -10,23 +10,29 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL
 
 export const metadata: Metadata = {
     title: {
-        default: `Soulandlight • Tarologue - Voyant - Medium Channel`,
+        default: `Tarologue - Voyant - Medium Channel • Soulandlight`,
         template: `%s • Soulandlight`,
     },
     description:
-        "Je reçois et transmets les messages de l'univers qui vous sont destinés pour vous aider sur votre chemin de vie. Clarté, apaisement, lumière. Libérez-vous.",
+        "Besoin de réponses claires ? Tarologue, voyant et medium expérimenté, je vous guide avec bienveillance et dans le cœur. Consultations en ligne ou en présentiel (Bordeaux et alentours).",
     keywords: [
-        "tarot",
-        "medium",
-        "voyant",
-        "spirituel",
-        "tirage",
-        "consultation",
+        "tarologue bordeaux",
+        "voyant bordeaux",
+        "voyance en ligne",
+        "medium bordeaux",
+        "medium en ligne",
+        "consultation tarot",
+        "tirage de cartes",
+        "tirage tarot en ligne",
+        "séance énergétique",
+        "guidance spirituelle personnalisée",
+        "guidance spirituelle",
+        "guide spirituel",
     ],
     openGraph: {
-        title: `Soulandlight`,
+        title: `Tarologue - Voyant - Medium Channel • Soulandlight`,
         description:
-            "Je reçois et transmets les messages de l'univers qui vous sont destinés pour vous aider sur votre chemin de vie. Clarté, apaisement, lumière. Libérez-vous.",
+            "Besoin de réponses claires ? Tarologue, voyant et medium expérimenté, je vous guide avec bienveillance et dans le cœur. Consultations en ligne ou en présentiel (Bordeaux et alentours).",
         url: SITE_URL,
         type: "website",
         images: [
@@ -34,21 +40,21 @@ export const metadata: Metadata = {
                 url: `${SITE_URL}/assets/hero-preview.webp`,
                 width: 1200,
                 height: 630,
-                alt: `Soulandlight`,
+                alt: `Tarologue, voyant, medium - Soulandlight -Consultations en ligne ou à Bordeaux et alentours.`,
             },
             {
                 url: `${SITE_URL}/assets/hero-preview.webp`,
                 width: 1200,
                 height: 630,
-                alt: `Soulandlight`,
+                alt: `Tarologue, voyant, medium - Soulandlight -Consultations en ligne ou à Bordeaux et alentours.`,
             },
         ],
     },
     twitter: {
         card: "summary_large_image",
-        title: `Soulandlight`,
+        title: `Tarologue - Voyant - Medium Channel • Soulandlight`,
         description:
-            "Je reçois et transmets les messages de l'univers qui vous sont destinés pour vous aider sur votre chemin de vie. Clarté, apaisement, lumière. Libérez-vous.",
+            "Besoin de réponses claires ? Tarologue, voyant et medium expérimenté, je vous guide avec bienveillance et dans le cœur. Consultations en ligne ou en présentiel (Bordeaux et alentours).",
         images: [`${SITE_URL}/assets/hero-preview.webp`],
     },
 }
@@ -71,8 +77,11 @@ export default function RootLayout({
                 />
                 <meta name="theme-color" content="#ff7321" />
 
+                <link rel="canonical" href={SITE_URL} />
+
                 <link rel="manifest" href="/manifest.json" />
                 <link rel="icon" href="/icons/favicon.ico" />
+                <link rel="preload" href="/assets/hero.webp" as="image" />
             </head>
             <body>
                 <Navigation />

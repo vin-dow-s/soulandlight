@@ -26,9 +26,10 @@ const Navigation = () => {
                     <div className="flex items-center gap-2 sm:gap-4">
                         <Image
                             src="/assets/metatron.webp"
-                            alt="Logo"
+                            alt="Soulandlight Logo Metatron - Consultation Tarot, voyance, guidance Spirituelle & Énergétique"
                             width={48}
                             height={48}
+                            priority={true}
                         />
                         <div className="flex flex-col">
                             <h2 className="text-xl sm:text-2xl">

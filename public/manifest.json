@@ -1,12 +1,14 @@
 {
-    "name": "Soulandlight",
+    "name": "Soulandlight • Tarologue - Voyant - Medium CHannel",
     "short_name": "Soulandlight",
-    "description": "Tarologue - Voyant - Medium",
+    "description": "Besoin de réponses claires ? Tarologue, voyant et medium expérimenté, je vous guide avec bienveillance et dans le cœur. Consultations en ligne ou en présentiel (Bordeaux et alentours).",
     "lang": "fr",
     "start_url": "/",
+    "scope": "/",
     "display": "standalone",
     "background_color": "#010e1e",
     "theme_color": "#ff7321",
+    "orientation": "portrait",
     "icons": [
         {
             "src": "/icons/favicon.ico",

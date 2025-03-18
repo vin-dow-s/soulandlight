@@ -73,10 +73,11 @@ const Hero = () => {
             <div className="flex justify-center lg:justify-end">
                 <Image
                     src="/assets/pascal.webp"
-                    alt="Pascal photo"
+                    alt="Tarologue Voyant Medium spirituel - Pascal - Consultations spirituelles et énergétiques"
                     width={550}
                     height={550}
                     className="w-[clamp(250px,40vw,300px)] lg:w-[clamp(300px,38vw,550px)] max-w-[550px]"
+                    priority={true}
                 />
             </div>
         </section>

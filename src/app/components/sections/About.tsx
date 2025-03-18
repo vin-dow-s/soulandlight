@@ -17,7 +17,7 @@ const About = () => {
                 <div className="w-full flex flex-col gap-4 text-center">
                     <Image
                         src="/assets/pascal2.webp"
-                        alt="Photo Pascal"
+                        alt="Tarot en ligne, guidances, libération émotionnelle - Pascal - Consultations spirituelles et énergétiques"
                         className="rounded-lg max-w-[600px] xl:min-w-[400px] w-full"
                         width={650}
                         height={650}
