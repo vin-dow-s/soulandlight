@@ -9,9 +9,9 @@ const Footer = () => {
                 <div className="flex flex-col gap-8 pb-8 border-b border-gray-700">
                     <div className="col-span-3 flex flex-row justify-between">
                         <div>
-                            <h6 className="text-sm font-heading text-gray-400 tracking-wider uppercase mb-4">
+                            <h5 className="text-sm font-heading text-gray-400 tracking-wider uppercase mb-4">
                                 Contact
-                            </h6>
+                            </h5>
                             <ul className="space-y-3 ">
                                 <li>
                                     <Link
@@ -54,9 +54,9 @@ const Footer = () => {
                         </div>
 
                         <div>
-                            <h6 className="text-sm font-heading text-gray-400 tracking-wider uppercase mb-4">
+                            <h5 className="text-sm font-heading text-gray-400 tracking-wider uppercase mb-4">
                                 Suivez-moi
-                            </h6>
+                            </h5>
                             <ul className="space-y-3 ">
                                 <li>
                                     <Link
