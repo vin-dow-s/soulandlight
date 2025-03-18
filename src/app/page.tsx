@@ -12,8 +12,9 @@ const HomePage = () => {
             <Testimonials />
             <About />
             <div className="flex flex-col justify-center items-center gap-6 my-96">
-                <p className="text-sm sm:text-base font-main">
-                    Vous avez des questions ou envie d'en savoir plus ?
+                <p className="text-sm sm:text-base font-main text-center font-medium">
+                    Vous avez des questions ou souhaitez réserver une
+                    consultation ?
                 </p>
                 <ButtonLink href="/contact" variant="secondary">
                     Contactez-moi
