@@ -1,3 +1,4 @@
+import { Metadata } from "next"
 import Image from "next/image"
 import ContactForm from "../components/sections/ContactForm"
 
@@ -5,10 +6,13 @@ export const dynamic = "force-static"
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL
 
-export const metadata = {
+export const metadata: Metadata = {
     title: "Contact",
     description:
         "Contactez Pascal, tarologue voyant et medium pour une consultation spirituelle ou énergétique en ligne ou en présentiel (Bordeaux et alentours).",
+    alternates: {
+        canonical: `${SITE_URL}/contact`,
+    },
     openGraph: {
         title: "Contact",
         description:

@@ -1,12 +1,16 @@
+import { Metadata } from "next"
 import Link from "next/link"
 
 export const dynamic = "force-static"
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL
 
-export const metadata = {
+export const metadata: Metadata = {
     title: "Mentions légales",
     description: "Mentions légales",
+    alternates: {
+        canonical: `${SITE_URL}/mentions-legales`,
+    },
     openGraph: {
         title: "Mentions légales",
         description: "Mentions légales",
